@@ -1,3 +1,5 @@
+import 'package:helper_set/model_set.dart';
+
 import 'TextHelper.dart';
 
 class ValidatorHelper {
@@ -9,6 +11,11 @@ class ValidatorHelper {
   }
 
   String? validateObject(dynamic value, {String? errorMessage}) {
+    if (value == null) return errorMessage ?? errorEmpty;
+    return null;
+  }
+
+  String? validateDropdown(LocalIdNameModel? value, {String? errorMessage}) {
     if (value == null) return errorMessage ?? errorEmpty;
     return null;
   }
