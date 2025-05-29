@@ -66,13 +66,13 @@ class TextHelper {
 
   ///
   String getCurrency(int amount, {bool withoutRp = false}) {
-    var myFormat = new NumberFormat("#,###", "ind");
+    var myFormat = new NumberFormat("#,###", "id");
     if (withoutRp) return myFormat.format(amount);
     return "Rp. " + myFormat.format(amount);
   }
 
   String getCurrencyWithDecimal(double amount, {bool withoutRp = false}) {
-    var myFormat = new NumberFormat("#,##0.00", "ind");
+    var myFormat = new NumberFormat("#,##0.00", "id");
     var result = myFormat.format(amount);
     if (result.endsWith(",00"))
       result = result.substring(0, result.length - 3);
